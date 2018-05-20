@@ -1,40 +1,126 @@
-<!doctype html>
-<html>
+<!-- 声明文档的解析类型浏览器使用W3C的标准解析渲染页面-->
+<!DOCTYPE html>
+<!--当前页面的语言类型-->
+<html lang="en">
 <head>
-	<title>SPA Chapater 1 secton 1.2.4</title>
-	<style>
-		body{
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			background-color: #777;
-		}
-		#spa{
-			position: absolute;
-			top: 8px;
-			left: 8px;
-			bottom: 8px;
-			right: 8px;
-			border-radius: 8px 8px 0 8px;
-			background-color: #fff;
-		}
-		.spa-slider{
-			position: absolute;
-			bottom: 0;
-			right: 2px;
-			width:300px;
-			height:16px;
-			cursor: pointer;
-			border-radius:8px 0 0 0;
-			background-color:#ff0;
+    <!--HTML 文档的字符编码-->
+    <meta charset="utf-8">
+    <!--
+    http://www.jb51.net/web/226895.html
+    X-UA-Compatible是针对 IE8 版本的一个特殊文件头标记，用于为 IE8 指定不同的页面渲染模式，对于ie8之外的浏览器是不识别的。
+    强制浏览器按照特定的版本标准进行渲染
+    IE=edge :按最新标准渲染
+    IE=EmulateIE7   :首选按IE7标准
+    chrome=1    :允许站点在使用了谷歌浏览器内嵌框架（Chrome Frame）的客户端渲染
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--
+    https://blog.csdn.net/u012402190/article/details/70172371
+    https://blog.csdn.net/never_say_goodbye/article/details/8823050
 
-		}
-	</style>
+    CSS pixels： 浏览器使用的抽象单位， 主要用来在网页上绘制内容。
+    device pixels： 显示屏幕的的最小物理单位，每个dp包含自己的颜色、亮度。
 
+    width 	设置layout viewport  的宽度，为一个正整数，或字符串"width-device"
+    initial-scale 	设置页面的初始缩放值，为一个数字，可以带小数
+    minimum-scale 	允许用户的最小缩放值，为一个数字，可以带小数
+    maximum-scale 	允许用户的最大缩放值，为一个数字，可以带小数
+    height 	设置layout viewport  的高度，这个属性对我们并不重要，很少使用
+    user-scalable 	是否允许用户进行缩放，值为"no"或"yes", no 代表不允许，yes代表允许
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!--
+    description:网页的描述，是给搜索引擎看的，搜索引擎根据这个描述进行收录排名，一般是网页内的关键字。
+    -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--浏览器标签栏图标-->
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <!--iconFont 阿里图标 SDN引入 part 1/3-->
+    <!--   转到css里
+     <style type="text/css">
+           .icon {
+               width: 10em; height: 10em;
+               vertical-align: -0.15em;
+               fill: currentColor;
+               overflow: hidden;
+           }
+       </style>-->
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS   SDN bootstrap.min.css-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template 该页的css-->
+    <link href="starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!--iconFont 阿里图标 SDN引入 part 2/3-->
+    <script type="text/javascript" src="//at.alicdn.com/t/font_673684_daxepo59cmdndn29.js"></script>
 </head>
+
 <body>
-	<div id="spa">
-		<div class = "spa-slider"></div>
-	</div>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="container">
+    <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a
+            mostly barebones HTML document.</p>
+    </div>
+</div><!-- /.container -->
+
+<!--iconFont 阿里图标 SDN引入 part 3/3-->
+<div class = "container" >
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-shouye"></use>
+    </svg>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

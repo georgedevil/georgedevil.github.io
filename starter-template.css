@@ -1,0 +1,15 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+
+}
+
+.icon {
+  width: 10em; height: 10em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
